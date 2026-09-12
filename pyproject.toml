@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lib32100"
+version = "1.0.0"
+description = "Dependency-free PPPP/CGI camera toolkit for credential extraction and persistent RTSP configuration"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["camera", "rtsp", "onvif", "pppp", "pcap"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Multimedia :: Video",
+    "Topic :: System :: Networking",
+]
+dependencies = []
+
+[project.scripts]
+lib32100 = "lib32100.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
